@@ -30,12 +30,12 @@ jobs:
         # TODO: run pytest
         - name: Run pytest
           run: |
-            pytest ./task_a/task_a.py --html=report.html
+            pytest ./task_a/task_a.py --html=Report-${{ matrix.os }}-${{ matrix.python-version }}.html
         - name: Upload Report
           if: always()
           uses: actions/upload-artifact@v4
           with:
-            name: pytest-report
-            path: report.html
+            name: pytest-Report-${{ matrix.os }}-${{ matrix.python-version }}
+            path: Report-${{ matrix.os }}-${{ matrix.python-version }}.html
 
 
