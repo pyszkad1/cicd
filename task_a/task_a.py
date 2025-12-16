@@ -23,3 +23,6 @@ def test_fib() -> None:
     assert fib(5) == 5
     assert fib(10) == 55
     
+# TODO: add one failing test 
+def test_failing():
+    assert 1 == 2
